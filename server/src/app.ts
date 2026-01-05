@@ -2,7 +2,8 @@ import express from "express";
 import cors from "cors";
 import { requestLogger } from "./middlewares/requestLogger";
 import { errorHandler } from "./middlewares/errorHandler";
-import { error } from "node:console";
+import { notFound } from "./middlewares/notFound";
+import { AppError } from "./utils/appError";
 
 export const app = express()
 
@@ -16,17 +17,16 @@ app.get("/health", (_req, res) => {
     res.status(200).json({ status: "ok" });
 });
 
-/* app.get("/ise500", () => {
-    throw new Error("ise500");
-}); */
+/* app.get("/err400", () => {
+    throw new AppError("err400", 400);
+}); 
+
+app.get("/err500", () => {
+    throw new AppError("err500", 500);
+});  */
 
 // 404 handler
-app.use((req, res) => {
-    res.status(404).json({
-        status: "error",
-        message: `Route not found: ${req.method} ${req.originalUrl}`
-    });
-});
+app.use(notFound);
 
 // Global error handler
 app.use(errorHandler);
