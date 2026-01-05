@@ -9,10 +9,6 @@ async function runSqlFile(filePath: string) {
   const pool = createDbPool();
 
   try {
-    // mysql2 supports multiStatements only if enabled; safer approach:
-    // split by ; is error-prone, so we execute as a whole ONLY if the SQL
-    // is compatible. Your schema file is compatible with single execute calls
-    // per statement, so we’ll do a minimal statement splitter.
     const statements = sql
       .split(/;\s*$/m) // split on line-ending semicolons
       .map(s => s.trim())
