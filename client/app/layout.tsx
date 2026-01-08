@@ -29,8 +29,9 @@ export default function RootLayout({
       <body
         className={` ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        <div className="mb-[235px]"></div>
+        <Header className="z-999"/>
+        <div className="h-[110px] sm:h-[125px] md:h-[150px] lg:h-[175px] xl:h-[235px] fixed top-0 w-full bg-primaryBackground z-990"></div>
+        <div className="mb-[110px] sm:mb-[125px] md:mb-[150px] lg:mb-[175px] xl:mb-[235px]"></div>
         {children}
         <Footer className="text-footerText bg-footerBackground"/>
       </body>

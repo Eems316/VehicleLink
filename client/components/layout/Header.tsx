@@ -24,6 +24,7 @@ const Header = React.forwardRef<HTMLDivElement, HeaderProps>(function Header (
             >
             
             <Image
+                key={1}
                 src="/c4Logo.svg"
                 alt="VehicleLink"
                 width={235}
