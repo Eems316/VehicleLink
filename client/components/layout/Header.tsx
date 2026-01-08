@@ -105,8 +105,10 @@ const Header = React.forwardRef<HTMLDivElement, HeaderProps>(function Header (
             {/* Mobile Links */}
                 <div
                     id="mobile-menu"
-                    className={`md:hidden overflow-hidden transition-[max-height,opacity] duration-300 ease-out ${
-                                menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
+                    className=  {ccf(
+                                    "md:hidden overflow-hidden transition-[max-height,opacity] duration-300 ease-out",
+                                    menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                                )}
                     >
                         <nav className="fixed top-[75px] left-[74%] px-6 pb-6 pt-2 bg-navBackground shadow-[0_-10px_6px_rgba(0,0,0,0.45),0_0_10px_2px_rgba(0,0,0,0.45)]">
                             <ul className="flex flex-col gap-3">
