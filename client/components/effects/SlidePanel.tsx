@@ -30,11 +30,8 @@ function SlidePanel({
   console.log(slideOffset);
 
   const ref = useSlideOnScroll<HTMLDivElement>({
-    // Shape of Observer box
     rootMargin: computedRootMargin,
-    // how much of the element must be inside the Observer box
     threshold,
-    // controls whether the element comes back
     once,
   });
 

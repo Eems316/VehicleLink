@@ -101,7 +101,7 @@ strong {
   opacity: 0;
 }
 
-/* Smooth animation (Tailwind could do this too, but CSS is clean here) */
+/* Smooth animation (Tailwind could do this too, but keeping it as CSS to keep task uniform) */
 [data-slide] {
   transition: transform 600ms ease, opacity 400ms ease;
   will-change: transform, opacity;
