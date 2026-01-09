@@ -2,6 +2,9 @@
 
 @theme {
   /* GLOBAL */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
   --color-primaryBackground: #8FA4A8;
   --color-primaryText: #242424;
   --color-textHeading: #382821;
@@ -12,6 +15,12 @@
   --color-buttonHover: #B8410F;
 
   --color-hyperlinkUnvisited: #382821;
+
+  --color-formBackground: #E3E3E3;
+
+  --color-tableBorder: #999999;
+  --color-tablePrimaryBackground: #C9C9C9;
+  --color-tableSecondaryBackground: #BBBBBB;
 
   /* SCOPED */
 
@@ -31,13 +40,6 @@
 :root {
   --background: #ffffff;
   --foreground: #8FA4A8;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
