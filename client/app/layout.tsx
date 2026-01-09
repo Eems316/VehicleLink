@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="">
       <body
-        className={` ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header className="z-999"/>
         <div className="h-[110px] sm:h-[125px] md:h-[150px] lg:h-[175px] xl:h-[235px] fixed top-0 w-full bg-primaryBackground z-990"></div>

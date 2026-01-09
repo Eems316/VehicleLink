@@ -88,3 +88,21 @@ h6 {
 strong {
   font-weight: bold;
 }
+
+/* SCROLL DRIVEN COMPONENTS */
+/* Panels slide visually, but stay in normal document flow */
+[data-slide="in"] {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+[data-slide="out"] {
+  transform: translateX(var(--slideX, 120%)); /* off screen to the right */
+  opacity: 0;
+}
+
+/* Smooth animation (Tailwind could do this too, but CSS is clean here) */
+[data-slide] {
+  transition: transform 600ms ease, opacity 400ms ease;
+  will-change: transform, opacity;
+}
