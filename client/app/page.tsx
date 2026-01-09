@@ -1,7 +1,6 @@
 "use client";
 
 import HeroButton from "@/components/buttons/HeroButton";
-import VehicleButton from "@/components/buttons/VehicleButton";
 import InfoPanel from "@/components/containers/InfoPanel";
 import SlidePanel from "@/components/effects/SlidePanel";
 import Spacer from "@/components/layout/Spacer";
