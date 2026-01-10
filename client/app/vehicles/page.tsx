@@ -1,5 +1,6 @@
 "use client"
 
+import VehicleCard from "@/components/cards/VehicleCard";
 import InfoPanel from "@/components/containers/InfoPanel"
 import VehicleTable from "@/components/Info/VehicleTable";
 import { getMakes, getModels, getVehicles, getYears } from "@/routes/routes";
@@ -21,10 +22,13 @@ export default function Vehicles() {
     const [modelDisabled, setModelDisabled] = useState<boolean>(true);
     const [yearDisabled, setYearDisabled] = useState<boolean>(true);
 
+    const handleVehicleSelection = (v: VehicleRow) => {
+        setSelectedVehicle(v);
+    }
+
     const loadVehicles = async () => {
         try{
             const vehicles = await getVehicles(selectedMake, selectedModel, selectedYear);
-            console.log(vehicles);
             setVehiclesList(vehicles);
         } catch (err) {
             console.error("Failed to load vehicles ", err)
@@ -153,7 +157,12 @@ export default function Vehicles() {
                 </button>
             </div>
             <InfoPanel className="mx-auto bg-textboxBackground text-textHeading max-w-[1000px]">
-                <VehicleTable vehicles={vehiclesList}>
+                <VehicleTable vehicles={vehiclesList} onVehicleSelect={handleVehicleSelection}>
+                    <tr>
+                        <td colSpan={6}>
+                            <VehicleCard vehicle={selectedVehicle}/>
+                        </td>
+                    </tr>
                 </VehicleTable>
             </InfoPanel>
         </main>

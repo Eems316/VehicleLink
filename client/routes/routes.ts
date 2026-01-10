@@ -19,6 +19,12 @@ export const CLIENT_ROUTES = (() => {
     } as const;
 })();
 
+export const IMAGE_ROUTES = {
+    public: "/",
+    buttons: "/images/buttons/",
+    vehicles: "/images/vehicles/",
+}
+
 // routes to backend
 const API_ROUTES = (() => {
     const base = {
