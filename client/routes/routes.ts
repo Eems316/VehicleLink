@@ -46,7 +46,7 @@ export async function getVehicles(make: string, model: string, year: string): Pr
     const url = formatVehicleSearch(API_ROUTES.vehicles, make, model, year);
     const res = await fetch(url);
     if (!res.ok) {
-        throw new Error(`Failed to fetch options (${res.status})`);
+        throw new Error(`Failed to fetch vehicles (${res.status})`);
     }
     
     const data: ApiResponse<VehiclePayload> = await res.json();
