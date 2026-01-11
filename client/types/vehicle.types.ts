@@ -1,5 +1,3 @@
-import { ApiResponse } from "./types";
-
 // vehicle related types
 export type VehicleRow = {
     vehicleId: number;

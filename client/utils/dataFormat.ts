@@ -21,7 +21,7 @@ export function formatLocalDate(isoString: string): string {
     });
 }
 
-// gets a generic array and sorts it by a property of the passed type
+// gets a generic array of objects and sorts it by a property of the passed type
 export function sortBy<T>(
     items: T[],
     key: keyof T,
@@ -41,4 +41,21 @@ export function sortBy<T>(
         ? String(aVal).localeCompare(String(bVal))
         : String(bVal).localeCompare(String(aVal));
     });
+}
+
+// gets a generic array of objects and returns a new array of the passed type without duplicates
+export function getCategories<T, K extends keyof T>(
+    items: T[],
+    key: K
+): T[K][] {
+    const seen = new Set<T[K]>();
+
+    for (const item of items) {
+        const value = item[key];
+        if (value !== undefined && value !== null) {
+        seen.add(value);
+        }
+    }
+
+  return Array.from(seen);
 }

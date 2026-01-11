@@ -1,5 +1,6 @@
-import { ApiResponse, OptionsPayload, VehiclePayload } from "@/types/types";
+import { ApiResponse, OptionsPayload, PartsPayload, VehiclePayload } from "@/types/types";
 import { checkIfEmpty } from "./dataFormat";
+import { PartRow } from "@/types/parts.types";
 
 // gets and returns required data from the payload, used to make routes.ts understandable
 export function formatOptionsPayload(response: ApiResponse<OptionsPayload>): string[] {
@@ -7,6 +8,10 @@ export function formatOptionsPayload(response: ApiResponse<OptionsPayload>): str
 }
 
 export function formatVehiclesPayload(response: ApiResponse<VehiclePayload>) {
+    return response.data.items;
+}
+
+export function formatPartsPayload(response: ApiResponse<PartsPayload>): PartRow[] {
     return response.data.items;
 }
 
