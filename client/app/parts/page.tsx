@@ -2,7 +2,6 @@
 
 import PartsCard from "@/components/cards/PartsCard";
 import InfoPanel from "@/components/containers/InfoPanel"
-import Spacer from "@/components/layout/Spacer";
 import { getParts } from "@/routes/routes";
 import { PartCategory } from "@/types/parts.types";
 import { groupPartsByCategory } from "@/utils/partsFormat";
