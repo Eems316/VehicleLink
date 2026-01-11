@@ -108,3 +108,12 @@ strong {
   transition: transform 600ms ease, opacity 400ms ease;
   will-change: transform, opacity;
 }
+
+.cls-1 { letter-spacing: 0em; }
+.cls-2 { fill: none; stroke: #231f20; stroke-miterlimit: 10; }
+.cls-3 { fill: none; stroke: #231f20; stroke-miterlimit: 10; }
+.cls-4 { letter-spacing: -0.03em; }
+.cls-5 { letter-spacing: -0.01em; }
+.cls-6 { letter-spacing: 0.02em; }
+.cls-7 { fill: #231f20; font-family: "Myriad Pro", MyriadPro-Regular, sans-serif; font-size: 12px; }
+.cls-8 { letter-spacing: 0em; }

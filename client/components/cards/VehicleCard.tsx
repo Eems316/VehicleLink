@@ -38,7 +38,8 @@ const VehicleCard = React.forwardRef<HTMLDivElement, VehicleCardProps>(function 
 
             {vehicle.vin &&
             <div>
-                <Image src={IMAGE_ROUTES.vehicles + vehicle.vin + ".JPG"}
+                            {/* Add the proper route "vehicle.vin" to image below */}
+                <Image src={IMAGE_ROUTES.vehicles + "0LHLWGBW12NESGWHC" + ".JPG"}
                         width={900/2}
                         height={600/2}
                         alt={`${vehicle.color} ${vehicle.make} ${vehicle.model} with ${vehicle.odometer} miles`}

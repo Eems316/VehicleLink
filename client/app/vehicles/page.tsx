@@ -3,6 +3,7 @@
 import VehicleCard from "@/components/cards/VehicleCard";
 import InfoPanel from "@/components/containers/InfoPanel"
 import VehicleTable from "@/components/Info/VehicleTable";
+import YardMap from "@/components/Info/YardMap";
 import { getMakes, getModels, getVehicles, getYears } from "@/routes/routes";
 import { VehicleRow } from "@/types/vehicle.types";
 import { checkIfEmpty } from "@/utils/dataFormat";
@@ -164,6 +165,9 @@ export default function Vehicles() {
                         </td>
                     </tr>
                 </VehicleTable>
+            </InfoPanel>
+            <InfoPanel  className="mx-auto bg-textboxBackground text-textHeading max-w-[1000px]">
+                <YardMap className="p-4" lotCode={selectedVehicle?.lotSpaceCode? selectedVehicle.lotSpaceCode : ""}></YardMap>
             </InfoPanel>
         </main>
     )

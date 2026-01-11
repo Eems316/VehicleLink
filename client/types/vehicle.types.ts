@@ -20,3 +20,9 @@ export type VehicleFilters = {
 export type Options = {
     items: string[];
 }
+
+export type lotCoords = {
+    lotCode: string;
+    xCoords: string;
+    yCoords: string;
+}
