@@ -21,7 +21,7 @@ const PartsCard = React.forwardRef<HTMLDivElement, PartsCardProps>(function Part
       className={ccf("", className)}
       {...props}
     >
-        <div className="">
+        <div>
             <button className="text-left cursor-pointer text-buttonText hover:text-buttonHover" onClick={() => setIsOpen(!isOpen)}>
                 <span className="border rounded-md px-1 py-[.5] m-2">
                     {isOpen ? '–' : '+'}
@@ -33,9 +33,11 @@ const PartsCard = React.forwardRef<HTMLDivElement, PartsCardProps>(function Part
         </div>
 
         {isOpen && 
-            <ul className="text-left">
-                {children}
-            </ul>
+            <div className="mx-auto w-fit max-w-md px-2">
+                <div className="grid grid-cols-[1fr_auto] gap-x-6 gap-y-1" >
+                    {children}
+                </div>
+            </div>
         }
     </div>
   );

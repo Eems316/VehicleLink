@@ -24,7 +24,6 @@ export function formatModelSearch(url: string, make: string) {
     const ext = params.toString();
 
     const u = ext ? url + "?" + ext : url;
-    console.log(u);
     return u;
 }
 
@@ -37,7 +36,6 @@ export function formatYearSearch(url: string, make: string, model: string) {
     const ext = params.toString();
 
     const u = ext ? url + "?" + ext : url;
-    console.log(u);
     return u;
 }
 
