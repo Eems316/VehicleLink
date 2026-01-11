@@ -107,6 +107,9 @@ export default function Vehicles() {
 
     return(
         <main className="p-2 mx-auto md:max-w-[1800px]">
+            <InfoPanel className="p-4 mx-auto bg-textboxBackground text-textHeading w-fit">
+                <h1>Find Vehicles</h1>
+            </InfoPanel>
             <div className="flex flex-wrap justify-center">
                 <InfoPanel className="p-2 mx-4 bg-textboxBackground text-primaryText">
                     <span className="font-bold">Make: </span>
