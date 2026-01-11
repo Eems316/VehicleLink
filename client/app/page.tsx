@@ -18,7 +18,7 @@ export default function Home() {
             }}>
         <div id="main-content" className="relative z-998 mx-24 lg:max-w-5xl">
 
-          <Spacer className="my-4 md:my-6 lg:my-32"/>
+          <Spacer className="my-16 md:my-10 lg:my-32"/>
           
           <SlidePanel className="md:w-[75%] mx-auto" direction="right">
             <InfoPanel className="bg-textboxBackground text-textHeading">
