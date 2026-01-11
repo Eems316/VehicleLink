@@ -3,6 +3,7 @@ import * as React from "react";
 import Image from "next/image";
 import { CLIENT_ROUTES } from "@/routes/routes";
 import Link from "next/link";
+import { BUSINESS_ADDRESS, CONTACT_INFO } from "@/constants/info.constants";
 
 
 type FooterProps = React.ComponentPropsWithoutRef<"div">;
@@ -18,10 +19,10 @@ const Footer = React.forwardRef<HTMLDivElement, FooterProps>(function Footer(
             {...props}
         >
             <div className="md:text-left md:ml-10">
-                <p>1234 W Some St.</p>
-                <p className="mb-2">Toldeo, OH 43611</p>
-                <p className="mb-2">(567) 555-WREK</p>
-                <p>CoreyF@c4wrecking.com</p>
+                <p>{BUSINESS_ADDRESS.address}</p>
+                <p className="mb-2">{BUSINESS_ADDRESS.city}, {BUSINESS_ADDRESS.stateAcronym} {BUSINESS_ADDRESS.zip}</p>
+                <p className="mb-2">{CONTACT_INFO.phone}</p>
+                <p>{CONTACT_INFO.email}</p>
             </div>
 
 

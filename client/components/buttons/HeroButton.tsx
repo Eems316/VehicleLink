@@ -1,6 +1,5 @@
 import { ccf } from "@/utils/styleFormat";
 import Link, { LinkProps } from "next/link";
-import Image from "next/image";
 import * as React from "react";
 import InfoPanel from "../containers/InfoPanel";
 
