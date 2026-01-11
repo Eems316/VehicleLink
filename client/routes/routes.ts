@@ -59,7 +59,7 @@ export async function getVehicles(make: string, model: string, year: string): Pr
 export async function getParts(): Promise<PartRow[]> {
     const res = await fetch(API_ROUTES.parts);
     if (!res.ok) {
-        throw new Error(`Failed to fetch options (${res.status})`);
+        throw new Error(`Failed to fetch parts (${res.status})`);
     }
     
     const data: ApiResponse<PartsPayload> = await res.json();
