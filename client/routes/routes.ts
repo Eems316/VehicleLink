@@ -22,6 +22,7 @@ export const CLIENT_ROUTES = (() => {
 
 export const IMAGE_ROUTES = {
     public: "/",
+    images: "/images/",
     buttons: "/images/buttons/",
     vehicles: "/images/vehicles/",
 }
