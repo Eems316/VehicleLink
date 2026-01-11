@@ -2,7 +2,6 @@ import { lotCoords } from "@/types/vehicle.types";
 
 export const PAGE_SIZE = 10;
 
-
 export const LOT_COORDS: lotCoords[] = [
     // Row A
     { lotCode: "A1", xCoords: "3.14", yCoords: "96.98" },

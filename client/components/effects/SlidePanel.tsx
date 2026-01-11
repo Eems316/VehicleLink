@@ -22,12 +22,8 @@ function SlidePanel({
 }) {
 
   const isMobile = typeof window !== "undefined" && window.matchMedia("(max-width: 640px)").matches;
-  console.log(isMobile);
-
   const slideOffset = isMobile ? mvOffset : vOffset;
-
   const computedRootMargin = `-${slideOffset}px ${rootMargin}`;
-  console.log(slideOffset);
 
   const ref = useSlideOnScroll<HTMLDivElement>({
     rootMargin: computedRootMargin,
